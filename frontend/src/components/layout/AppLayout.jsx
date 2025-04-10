@@ -4,12 +4,12 @@ import { Layout, Spin } from "antd";
 import AppHeader from "./AppHeader";
 import AppSider from "./AppSider";
 import AppContent from "./AppContent";
+import DarkSpotEffect from "../DarkSpotEffect.jsx";
 
 export default function AppLayout() {
   const layoutStyle = {
     maxHeight: '100vh',
     overflow: 'hidden',
-    //backgroundColor: '#FFFFFF'
   }
 
   const { loading } = useContext(CryptoContext);
@@ -20,6 +20,7 @@ export default function AppLayout() {
 
   return (
     <Layout style={layoutStyle}>
+      <DarkSpotEffect />
       <AppHeader />
       <Layout>
         <AppSider />
