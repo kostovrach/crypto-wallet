@@ -3,20 +3,16 @@ import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { capitalize } from '../../utils';
 import { useContext } from 'react';
 import CryptoContext from '../../context/crypto-context';
+import './styles/AppSider.css'
 
-
-
-const siderStyle = {
-    padding: '1rem',
-  };
 
 export default function AppSider() {
     const {assets} = useContext(CryptoContext)
 
     return (
-        <Layout.Sider width="25%" style={siderStyle}>
+        <Layout.Sider width="25%" className='sider'>
             {assets.map(asset => (
-                <Card key={asset.id} style={{ marginBottom: '1rem' }}>
+                <Card key={asset.id} style={{ marginBottom: '1rem', backgroundColor: '#FAFAFA'}}>
                 <Statistic
                     title={capitalize(asset.id)}
                     value={asset.totalAmount}
@@ -28,9 +24,8 @@ export default function AppSider() {
                 <List
                     size='small'
                     dataSource={[
-                        { title: 'Total Profit:', value: asset.totalProfit, withTag: true },
-                        { title: 'Asset Amount:', value: asset.amount, isPlain: true },
-                        /*{ title: 'Difference:', value: asset.growPercent },*/
+                        { title: 'Прибыль:', value: asset.totalProfit, withTag: true },
+                        { title: 'Количество:', value: asset.amount, isPlain: true },
                     ]}
                     renderItem={(item) => (
                     <List.Item>

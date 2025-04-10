@@ -41,7 +41,7 @@ export default function AddAssetForm({ onClose }) {
                 style={{ width: '100%' }}
                 onSelect={(v) => setCoin(crypto.find((c) => c.id === v))}
                 //value='Press "/" to search'
-                placeholder='Select Coin'
+                placeholder='Выберите валюту'
                 options={crypto.map(coin => ({
                     label: coin.name,
                     value: coin.id,
@@ -103,7 +103,7 @@ export default function AddAssetForm({ onClose }) {
             <Divider />
             
             <Form.Item
-                label="Amount"
+                label="Количество"
                 name="amount"
                 rules={[{
                     required: true,
@@ -112,36 +112,36 @@ export default function AddAssetForm({ onClose }) {
                 }]}
             >
                 <InputNumber
-                    placeholder="Enter coin amount"
+                    placeholder="Введите количество"
                     style={{width: '100%'}}
                     onChange={handleAmountChange}
                 />
             </Form.Item>
             
             <Form.Item
-                label="Price"
+                label="Цена"
                 name="price"
             >
                 <InputNumber onChange={handlePriceChange} style={{width: '100%'}} />
             </Form.Item>
 
             <Form.Item
-                label="Date & Time"
+                label="Дата покупки"
                 name="date"
             >
-                <DatePicker showTime />
+                <DatePicker placeholder="Выберите дату" style={{width: 230}}/>
             </Form.Item>
 
             <Form.Item
-                label="Total"
+                label="Итог"
                 name="total"
             >
                 <InputNumber disabled style={{width: '100%'}} />
             </Form.Item>
             
             <Form.Item label={null}>
-                <Button type="primary" htmlType="submit">
-                    Add Asset
+                <Button type="primary" htmlType="submit" style={{ backgroundColor: "#132F49" }}>
+                    Добавить
                 </Button>
             </Form.Item>
         </Form>

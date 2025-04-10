@@ -1,0 +1,7 @@
+.table {
+    overflow-y: auto;
+}
+
+.table::-webkit-scrollbar {
+    display: none;
+}

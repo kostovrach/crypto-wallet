@@ -1,24 +1,30 @@
-import { useContext } from 'react';
-import CryptoContext from '../../context/crypto-context';
-import { Layout, Spin } from 'antd';
-import AppHeader from './AppHeader';
-import AppSider from './AppSider';
-import AppContent from './AppContent';
+import { useContext } from "react";
+import CryptoContext from "../../context/crypto-context";
+import { Layout, Spin } from "antd";
+import AppHeader from "./AppHeader";
+import AppSider from "./AppSider";
+import AppContent from "./AppContent";
 
 export default function AppLayout() {
-    const { loading } = useContext(CryptoContext)
+  const layoutStyle = {
+    maxHeight: '100vh',
+    overflow: 'hidden',
+    //backgroundColor: '#FFFFFF'
+  }
 
-    if (loading) {
-        return (<Spin fullscreen />)
-    }
+  const { loading } = useContext(CryptoContext);
 
-    return (
-        <Layout>
-            <AppHeader />
-            <Layout>
-                <AppSider />
-                <AppContent />
-            </Layout>
-        </Layout>
-    )
+  if (loading) {
+    return <Spin fullscreen />;
+  }
+
+  return (
+    <Layout style={layoutStyle}>
+      <AppHeader />
+      <Layout>
+        <AppSider />
+        <AppContent />
+      </Layout>
+    </Layout>
+  );
 }

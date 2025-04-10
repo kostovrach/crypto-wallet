@@ -1,0 +1,18 @@
+.content {
+  text-align: center;
+  height: calc(100vh - 128px);
+  color: "#fff";
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.title {
+  text-align: left;
+  color: #646464;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
