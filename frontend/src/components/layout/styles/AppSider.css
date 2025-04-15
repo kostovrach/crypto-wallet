@@ -1,0 +1,11 @@
+.sider {
+    height: calc(100vh - 128px);
+    overflow-y: scroll;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-right: 1px solid #F0F0F0;
+}
+
+.sider::-webkit-scrollbar {
+    display: none;
+}
