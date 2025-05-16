@@ -10,7 +10,7 @@ export default function AppSider() {
     const {assets} = useContext(CryptoContext)
 
     return (
-        <Layout.Sider width="25%" className='sider'>
+        <Layout.Sider width="30%" className='sider'>
             {assets.map(asset => (
                 <Card key={asset.id} style={{ marginBottom: '1rem', backgroundColor: '#FAFAFA'}}>
                 <Statistic

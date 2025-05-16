@@ -4,12 +4,12 @@ import { useCrypto } from "../context/crypto-context"
 import CoinInfo from "./CoinInfo"
 
 const validateMessages = {
-    required: '${label} is required!',
+    required: '${label} обязательное поле!',
     types: {
-        number: '${label} is not valid number',
+        number: '${label} не является числом!',
     },
     number: {
-        range: '${label} must be between ${min} and ${max}',
+        range: '${label} должно быть между ${min} и ${max}',
     },
 }
 
@@ -24,11 +24,11 @@ export default function AddAssetForm({ onClose }) {
         return (
             <Result
                 status="success"
-                title="New Asset Added"
-                subTitle={`Added ${assetRef.current.amount} of ${coin.name} by price ${assetRef.current.price}`}
+                title="Новая позиция добавлена"
+                subTitle={`Добавлено ${assetRef.current.amount} ${coin.name} по цене ${assetRef.current.price}`}
                 extra={[
                     <Button type="primary" key="console" onClick={onClose}>
-                        Close
+                        Закрыть
                     </Button>
                 ]}
             />

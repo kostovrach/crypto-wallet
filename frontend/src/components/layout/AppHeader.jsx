@@ -30,11 +30,11 @@ export default function AppHeader() {
   return (
     <Layout.Header className="header">
       <Select
-        style={{ width: "250px" }}
+        style={{ width: "200px" }}
         open={select}
         onSelect={handleSelect}
         onClick={() => setSelect((prev) => !prev)}
-        value='Нажмите "/" для поиска'
+        value='" / " для поиска'
         options={crypto.map((coin) => ({
           label: coin.name,
           value: coin.id,

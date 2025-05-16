@@ -43,10 +43,10 @@ export default function PortfolioChart() {
       legend: {
         position: "left",
         labels: {
-          padding: 20,
+          padding: 15,
           font: {
-            size: 16,
-            weight: 600,
+            size: 12,
+            weight: 550,
           },
         },
       },
